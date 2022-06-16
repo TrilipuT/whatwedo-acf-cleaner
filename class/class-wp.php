@@ -54,9 +54,10 @@ class WP
 		echo "<div id='acf_cleanup_data'>";
 		foreach ( $unused as $name => $key ) {
 			$field = trim( $name, "_" );
+			$value = get_field( $field, $postId );
+			$value = is_array( $value ) ? var_export( $value, true ) : print_r( $value, true );
 			echo "<div style='display: inline-block;width: 19%' title='$key'>$field</div>
-<input style='width: 80%;height: 2em' disabled value='" . sanitize_text_field( print_r( esc_html(get_field( $field, $postId )),
-					true ) ) . "'><br>";
+<input style='width: 80%;height: 2em' disabled value='" . esc_html( $value ) . "'><br>";
 		}
 		echo "<button class='button secondary' id='acf_cleanup_action'>Clean data</button>";
 		echo "<script>jQuery('#acf_cleanup_action').on('click',function(e){

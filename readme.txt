@@ -4,7 +4,7 @@ Tags:              admin, advanced custom fields, acf, cleanup, cleaner, metadat
 Requires at least: 5.5
 Tested up to:      5.6
 Requires PHP:      7.0
-Stable tag:        1.1.0
+Stable tag:        1.2.0
 License:           MIT
 License URI:       https://opensource.org/licenses/MIT
 
@@ -45,3 +45,7 @@ It's not under active development but can be used (on your own risk).
 
 = 1.0.0 (2020-02-22) =
 * First release
+= 1.1.0 (2022-05-15) =
+* Added single post metabox with detailed info for unused fields
+= 1.2.0 (2022-06-15) =
+* More precise unused fields detection added
